@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const articleModel = new mongoose.Schema({
 
-    title: string,
-    author : string,
-    body: string,
-    date: {type: Date, Date.now},
+    title: String,
+    author : String,
+    body: String,
+    date: {type: Date, default: Date.now},
     especial: Boolean,
     resume: {
-        content: string,
-        author: string
+        content: String,
+        author: String
     }
 
 });
