@@ -30,7 +30,7 @@ artigo.save().then(()=>{
 });
 */
 
-
+/* */
 //buscando todo os artigos
 Article.find({}).then(articles => {
     console.log(articles);
@@ -78,4 +78,15 @@ Article.findByIdAndDelete('61ef77f73f2644bb17479dce').then(result => {
     console.log(err);
 });
 */
+
+/*ATUALIZANDO UM REGISTRO  */
+Article.findByIdAndUpdate('61f0949bdadb3a87c8ad483c',{
+    author:'Claudisnei', 
+    title:'Aprendendo nodeJS',
+    body:'Agora estou aprendendo...'
+}).then(() => {
+    console.log("Registro atualizado")
+}).catch(err =>{
+    console.log(err)
+})
 
