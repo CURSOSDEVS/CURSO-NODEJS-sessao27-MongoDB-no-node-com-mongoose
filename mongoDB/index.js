@@ -21,17 +21,15 @@ const artigo = new Article({
     }
 });
 
-
+/*
 //salvando o primeiro artigo no banco de dados.
 artigo.save().then(()=>{
     console.log("Artigo salvo");
 }).catch(err =>{
     console.log(err);
 });
+*/
 
-
-
-/*
 
 //buscando todo os artigos
 Article.find({}).then(articles => {
@@ -40,6 +38,7 @@ Article.find({}).then(articles => {
     console.log(err);
 })
 
+/*
 
 //buscando dados espedificos
 //buscando pelo id
@@ -64,11 +63,19 @@ Article.find({'resume.author': 'Teste !'}).then(article => {
     console.log(err);
 })
 */
-
+/*
 //mostrando o primeiro resultado de uma busca que corresponde a um critério
 Article.findOne({'author': 'Eu sei 3'}).then(article => {
     console.log(article);
 }).catch(err => {
     console.log(err);
 })
+
+//deletando um registro pelo id
+Article.findByIdAndDelete('61ef77f73f2644bb17479dce').then(result => {
+    console.log('Registro deletado!');
+}).catch(err => {
+    console.log(err);
+});
+*/
 
